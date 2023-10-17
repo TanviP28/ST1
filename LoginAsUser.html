@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>	Login For Admin	</title>
+<script language="javascript">
+function validation_login()
+	{
+	var Semail			= document.getElementById("input_user").value;
+	var Spass			= document.getElementById("input_pwd").value;
+	var Sval_msg		= document.getElementById("val_msg");
+
+	
+	if(Semail != "admin")
+	{
+	event.preventDefault();
+		alert("Wrong Username");
+		return false;
+	}
+	if(Spass != "admin")
+	{
+	event.preventDefault();
+		alert("Wrong Password");
+		return false;
+	}
+	if( Semail=="admin")
+	{
+	document.forms[0].submit();
+	}
+	}
+
+</script>
+<link rel="stylesheet" href="style_adminlogin.css">
+</head>
+
+
+
+<body>
+
+<form action="MainAdmin.html">
+<div class="title">Admin Login</div>
+<h6 id="val_msg" style="padding-top:5px;font-size:20px;text-align:center;color:lightblue;"></h6>
+<div class="ph">
+<input type="text" id="input_user" name="input_user" placeholder="Username">
+<input type="password"id="input_pwd" name="input_pwd" placeholder="Password">
+</div>
+<div class="btns">
+<button onclick="validation_login()"> Login</button>
+</div>
+</form>
+
+</body>
+
+</html>
